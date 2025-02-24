@@ -103,18 +103,18 @@ sub start {
 
 __END__
 
-=head1 NAME Device::Modbus::Server::TCP -- Modbus TCP server class
+=head1 NAME Device::Modbus::TCP::Server -- Modbus TCP server class
 
 =head1 SYNOPSIS
 
     use My::Unit;
-    use Device::Modbus::Server::TCP;
+    use Device::Modbus::TCP::Server;
     use strict;
     use warnings;
  
     my $unit = My::Unit->new( id => 3 );
        
-    my $server = Device::Modbus::Server::TCP->new(
+    my $server = Device::Modbus::TCP::Server->new(
         server_type       => ['PreFork'],
         log_level         =>  2,
         min_servers       => 10,
@@ -139,7 +139,7 @@ The example in the synopsis of this document is using the PreFork personality of
 
 =head1 CONFIGURATION
 
-All the configuration possibilities found in L<Net::Server::MultiType> are available. The default parameters for Device::Modbus::Server::TCP are:
+All the configuration possibilities found in L<Net::Server::MultiType> are available. The default parameters for Device::Modbus::TCP::Server are:
 
     log_level   => 2,
     log_file    => undef,
@@ -150,7 +150,7 @@ All the configuration possibilities found in L<Net::Server::MultiType> are avail
 
 =head1 Net::Server::MultiType METHODS USED
 
-The methods defined by Net::Server::MultiType and used by Device::Modbus::Server::TCP are:
+The methods defined by Net::Server::MultiType and used by Device::Modbus::TCP::Server are:
 
 =head2 default_values
 
